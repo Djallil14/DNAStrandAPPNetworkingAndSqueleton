@@ -15,8 +15,12 @@ struct GeneViewLoader: View {
                 switch geneVM.dataPhase{
                 case .empty:
                     ProgressView()
-                case .success(let gene):
-                    GeneView(gene: gene)
+                case .success(let genes):
+                    VStack{
+                        ForEach(genes, id: \.query.pages.resultData.title){gene in
+                          GeneView(gene: gene)
+                        }
+                    }
                 case .failure(let error):
                     Text("Error: \(error.localizedDescription)")
                 }
@@ -32,12 +36,12 @@ struct GeneViewLoader: View {
     }
     private func getGene(){
         Task{
-            await geneVM.getGene(gene: showGene)
+            await geneVM.getGene()
         }
     }
 }
-//struct GeneViewLoader_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GeneViewLoader(geneVM: GeneViewModel(), showGene: .Insulin)
-//    }
-//}
+struct GeneViewLoader_Previews: PreviewProvider {
+    static var previews: some View {
+        GeneViewLoader(geneVM: GeneViewModel(), showGene: .Insulin)
+    }
+}
