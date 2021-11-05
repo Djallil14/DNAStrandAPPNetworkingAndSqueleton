@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		9D34507A2735BA080047D6B0 /* DNAStrandAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3450792735BA080047D6B0 /* DNAStrandAPPApp.swift */; };
-		9D34507C2735BA080047D6B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D34507B2735BA080047D6B0 /* ContentView.swift */; };
+		9D34507C2735BA080047D6B0 /* GeneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D34507B2735BA080047D6B0 /* GeneView.swift */; };
 		9D34507E2735BA0A0047D6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D34507D2735BA0A0047D6B0 /* Assets.xcassets */; };
 		9D3450812735BA0A0047D6B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D3450802735BA0A0047D6B0 /* Preview Assets.xcassets */; };
+		9D3450882735BA150047D6B0 /* WikiResultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3450872735BA150047D6B0 /* WikiResultAPI.swift */; };
+		9D34508A2735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3450892735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift */; };
+		9D34508C2735BA960047D6B0 /* api-result.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D34508B2735BA960047D6B0 /* api-result.json */; };
+		9D3450912735BB270047D6B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3450902735BB270047D6B0 /* NetworkManager.swift */; };
+		9D3450932735BD990047D6B0 /* GeneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3450922735BD990047D6B0 /* GeneViewModel.swift */; };
+		9DADF9B32735EE3100A5CA54 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B22735EE3100A5CA54 /* MainView.swift */; };
+		9DADF9B52735EE4F00A5CA54 /* GeneViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D3450762735BA080047D6B0 /* DNAStrandAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNAStrandAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3450792735BA080047D6B0 /* DNAStrandAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNAStrandAPPApp.swift; sourceTree = "<group>"; };
-		9D34507B2735BA080047D6B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9D34507B2735BA080047D6B0 /* GeneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneView.swift; sourceTree = "<group>"; };
 		9D34507D2735BA0A0047D6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3450802735BA0A0047D6B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9D3450872735BA150047D6B0 /* WikiResultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiResultAPI.swift; sourceTree = "<group>"; };
+		9D3450892735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadAndDecode.swift"; sourceTree = "<group>"; };
+		9D34508B2735BA960047D6B0 /* api-result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "api-result.json"; sourceTree = "<group>"; };
+		9D3450902735BB270047D6B0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9D3450922735BD990047D6B0 /* GeneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneViewModel.swift; sourceTree = "<group>"; };
+		9DADF9B22735EE3100A5CA54 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneViewLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				9D3450792735BA080047D6B0 /* DNAStrandAPPApp.swift */,
-				9D34507B2735BA080047D6B0 /* ContentView.swift */,
+				9DADF9B22735EE3100A5CA54 /* MainView.swift */,
+				9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */,
+				9D34507B2735BA080047D6B0 /* GeneView.swift */,
+				9D3450922735BD990047D6B0 /* GeneViewModel.swift */,
+				9D34508F2735BB270047D6B0 /* NetworkManager */,
+				9D34508D2735BA9D0047D6B0 /* Model */,
+				9D34508E2735BAA20047D6B0 /* Extensions */,
+				9D34508B2735BA960047D6B0 /* api-result.json */,
 				9D34507D2735BA0A0047D6B0 /* Assets.xcassets */,
 				9D34507F2735BA0A0047D6B0 /* Preview Content */,
 			);
@@ -65,6 +86,30 @@
 				9D3450802735BA0A0047D6B0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D34508D2735BA9D0047D6B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D3450872735BA150047D6B0 /* WikiResultAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D34508E2735BAA20047D6B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D3450892735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9D34508F2735BB270047D6B0 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				9D3450902735BB270047D6B0 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D34508C2735BA960047D6B0 /* api-result.json in Resources */,
 				9D3450812735BA0A0047D6B0 /* Preview Assets.xcassets in Resources */,
 				9D34507E2735BA0A0047D6B0 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D34507C2735BA080047D6B0 /* ContentView.swift in Sources */,
+				9DADF9B52735EE4F00A5CA54 /* GeneViewLoader.swift in Sources */,
+				9D3450882735BA150047D6B0 /* WikiResultAPI.swift in Sources */,
+				9DADF9B32735EE3100A5CA54 /* MainView.swift in Sources */,
+				9D34508A2735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift in Sources */,
+				9D3450912735BB270047D6B0 /* NetworkManager.swift in Sources */,
+				9D3450932735BD990047D6B0 /* GeneViewModel.swift in Sources */,
+				9D34507C2735BA080047D6B0 /* GeneView.swift in Sources */,
 				9D34507A2735BA080047D6B0 /* DNAStrandAPPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +329,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +359,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
