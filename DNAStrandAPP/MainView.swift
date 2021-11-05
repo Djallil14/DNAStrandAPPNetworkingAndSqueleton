@@ -12,9 +12,7 @@ struct MainView: View {
     var body: some View {
         ScrollView(){
             VStack{
-                ForEach(Gene.allCases, id:\.self){gene in
-                    GeneViewLoader(geneVM: geneStore, showGene: gene)
-                }
+                GeneViewLoader(geneVM: geneStore, showGene: .Insulin)
             }
         }
     }

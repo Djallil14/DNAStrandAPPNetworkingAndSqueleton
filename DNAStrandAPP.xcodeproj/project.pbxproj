@@ -18,6 +18,8 @@
 		9D3450932735BD990047D6B0 /* GeneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3450922735BD990047D6B0 /* GeneViewModel.swift */; };
 		9DADF9B32735EE3100A5CA54 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B22735EE3100A5CA54 /* MainView.swift */; };
 		9DADF9B52735EE4F00A5CA54 /* GeneViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */; };
+		9DADF9B72735F2FB00A5CA54 /* DataFetchPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B62735F2FB00A5CA54 /* DataFetchPhase.swift */; };
+		9DADF9B92735F31000A5CA54 /* Gene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B82735F31000A5CA54 /* Gene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		9D3450922735BD990047D6B0 /* GeneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneViewModel.swift; sourceTree = "<group>"; };
 		9DADF9B22735EE3100A5CA54 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneViewLoader.swift; sourceTree = "<group>"; };
+		9DADF9B62735F2FB00A5CA54 /* DataFetchPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchPhase.swift; sourceTree = "<group>"; };
+		9DADF9B82735F31000A5CA54 /* Gene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,7 @@
 				9DADF9B22735EE3100A5CA54 /* MainView.swift */,
 				9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */,
 				9D34507B2735BA080047D6B0 /* GeneView.swift */,
-				9D3450922735BD990047D6B0 /* GeneViewModel.swift */,
+				9DADF9BA2735F32400A5CA54 /* ViewModel */,
 				9D34508F2735BB270047D6B0 /* NetworkManager */,
 				9D34508D2735BA9D0047D6B0 /* Model */,
 				9D34508E2735BAA20047D6B0 /* Extensions */,
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				9D3450872735BA150047D6B0 /* WikiResultAPI.swift */,
+				9DADF9B62735F2FB00A5CA54 /* DataFetchPhase.swift */,
+				9DADF9B82735F31000A5CA54 /* Gene.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +116,14 @@
 				9D3450902735BB270047D6B0 /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		9DADF9BA2735F32400A5CA54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9D3450922735BD990047D6B0 /* GeneViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DADF9B92735F31000A5CA54 /* Gene.swift in Sources */,
 				9DADF9B52735EE4F00A5CA54 /* GeneViewLoader.swift in Sources */,
 				9D3450882735BA150047D6B0 /* WikiResultAPI.swift in Sources */,
 				9DADF9B32735EE3100A5CA54 /* MainView.swift in Sources */,
 				9D34508A2735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift in Sources */,
 				9D3450912735BB270047D6B0 /* NetworkManager.swift in Sources */,
 				9D3450932735BD990047D6B0 /* GeneViewModel.swift in Sources */,
+				9DADF9B72735F2FB00A5CA54 /* DataFetchPhase.swift in Sources */,
 				9D34507C2735BA080047D6B0 /* GeneView.swift in Sources */,
 				9D34507A2735BA080047D6B0 /* DNAStrandAPPApp.swift in Sources */,
 			);

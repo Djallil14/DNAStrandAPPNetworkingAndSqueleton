@@ -18,7 +18,7 @@ struct GeneView: View {
             Text(wikidata.title)
             ZStack{
                 if let image = wikidata.thumbnail {
-                    AsyncImage(url: URL(string: image.formattedThumbnailLink)) { image in
+                    AsyncImage(url: URL(string: image.formattedImageLink(width: 800))) { image in
                         image
                             .resizable()
                             .aspectRatio(1, contentMode: .fit)

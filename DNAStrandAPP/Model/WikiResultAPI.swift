@@ -60,14 +60,15 @@ struct WikiData: Codable {
 struct WikiImage: Codable {
     let source: String
     let width, height: Int
-    var formattedThumbnailLink: String {
+    
+    func formattedImageLink(width: Int)-> String{
         if source.contains("38px"){
             let urlstring = source
-            let formatedURL = urlstring.replacingOccurrences(of: "38px", with: "500px")
+            let formatedURL = urlstring.replacingOccurrences(of: "38px", with: "\(width)px")
             return formatedURL
         } else if source.contains("50px"){
             let urlstring = source
-            let formatedURL = urlstring.replacingOccurrences(of: "50px", with: "500px")
+            let formatedURL = urlstring.replacingOccurrences(of: "50px", with: "\(width)px")
             return formatedURL
         } else {
             return source
