@@ -7,12 +7,20 @@
 // Model respresenting the result of the api call
 
 import Foundation
+import SwiftSoup
 
 
 struct WikiAPIResult: Codable {
     let batchcomplete: String
     let query: Query
 }
+extension WikiAPIResult {
+    static let sampleUser: WikiAPIResult = {
+        let response: WikiAPIResult? = try? Bundle.main.loadAndDecodeJSON(filename: "api-result")
+        return response! // MARK: - Always make sure userSample is in the Bundle
+    }()
+}
+
 // MARK: - Query
 struct Query: Codable {
     let pages: Pages
@@ -46,16 +54,6 @@ struct Pages: Codable {
     
 }
 
-struct WikiData: Codable {
-    let pageid, ns: Int
-    let title: String
-    let thumbnail: WikiImage?
-    let contentmodel, pagelanguage, pagelanguagehtmlcode: String
-    let pagelanguagedir: String
-    let lastrevid, length: Int
-    let extract: String
-}
-
 // MARK: - Thumbnail
 struct WikiImage: Codable {
     let source: String
@@ -77,22 +75,4 @@ struct WikiImage: Codable {
 }
 
 
-extension WikiAPIResult {
-    static let sampleUser: WikiAPIResult = {
-        let response: WikiAPIResult? = try? Bundle.main.loadAndDecodeJSON(filename: "api-result")
-        return response! // MARK: - Always make sure userSample is in the Bundle
-    }()
-}
 
-@available(iOS 15, *)
-extension String {
-    var htmlAttributedString: NSAttributedString? {
-        guard let data = self.data(using: .utf8) else {return nil}
-        do {
-            return try NSAttributedString(data: data, options: [.documentType : NSAttributedString.DocumentType.html,.characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
-        }
-        catch {
-            return nil
-        }
-    }
-}

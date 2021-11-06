@@ -38,5 +38,4 @@ extension NetworkManager {
         let url = "https://en.wikipedia.org/w/api.php?format=json&utf8=1&action=query&prop=pageimages%7Cinfo%7Cextracts&titles=\(gene.urlAddition)"
         return URL(string: url)
     }
-   
 }

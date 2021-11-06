@@ -20,6 +20,9 @@
 		9DADF9B52735EE4F00A5CA54 /* GeneViewLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */; };
 		9DADF9B72735F2FB00A5CA54 /* DataFetchPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B62735F2FB00A5CA54 /* DataFetchPhase.swift */; };
 		9DADF9B92735F31000A5CA54 /* Gene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9B82735F31000A5CA54 /* Gene.swift */; };
+		9DADF9C1273619F400A5CA54 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADF9C0273619F400A5CA54 /* SwiftSoup */; };
+		9DADF9C327361A2D00A5CA54 /* HTMLAttributedString+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9C227361A2D00A5CA54 /* HTMLAttributedString+String.swift */; };
+		9DADF9C527361A5E00A5CA54 /* WikiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9C427361A5E00A5CA54 /* WikiData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,8 @@
 		9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneViewLoader.swift; sourceTree = "<group>"; };
 		9DADF9B62735F2FB00A5CA54 /* DataFetchPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetchPhase.swift; sourceTree = "<group>"; };
 		9DADF9B82735F31000A5CA54 /* Gene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gene.swift; sourceTree = "<group>"; };
+		9DADF9C227361A2D00A5CA54 /* HTMLAttributedString+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTMLAttributedString+String.swift"; sourceTree = "<group>"; };
+		9DADF9C427361A5E00A5CA54 /* WikiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DADF9C1273619F400A5CA54 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3450872735BA150047D6B0 /* WikiResultAPI.swift */,
+				9DADF9C427361A5E00A5CA54 /* WikiData.swift */,
 				9DADF9B62735F2FB00A5CA54 /* DataFetchPhase.swift */,
 				9DADF9B82735F31000A5CA54 /* Gene.swift */,
 			);
@@ -106,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3450892735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift */,
+				9DADF9C227361A2D00A5CA54 /* HTMLAttributedString+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +150,9 @@
 			dependencies = (
 			);
 			name = DNAStrandAPP;
+			packageProductDependencies = (
+				9DADF9C0273619F400A5CA54 /* SwiftSoup */,
+			);
 			productName = DNAStrandAPP;
 			productReference = 9D3450762735BA080047D6B0 /* DNAStrandAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 9D34506D2735BA080047D6B0;
+			packageReferences = (
+				9DADF9BF273619F400A5CA54 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 9D3450772735BA080047D6B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,10 +217,12 @@
 				9DADF9B32735EE3100A5CA54 /* MainView.swift in Sources */,
 				9D34508A2735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift in Sources */,
 				9D3450912735BB270047D6B0 /* NetworkManager.swift in Sources */,
+				9DADF9C327361A2D00A5CA54 /* HTMLAttributedString+String.swift in Sources */,
 				9D3450932735BD990047D6B0 /* GeneViewModel.swift in Sources */,
 				9DADF9B72735F2FB00A5CA54 /* DataFetchPhase.swift in Sources */,
 				9D34507C2735BA080047D6B0 /* GeneView.swift in Sources */,
 				9D34507A2735BA080047D6B0 /* DNAStrandAPPApp.swift in Sources */,
+				9DADF9C527361A5E00A5CA54 /* WikiData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +427,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DADF9BF273619F400A5CA54 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DADF9C0273619F400A5CA54 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DADF9BF273619F400A5CA54 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D34506E2735BA080047D6B0 /* Project object */;
 }

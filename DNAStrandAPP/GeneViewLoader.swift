@@ -45,3 +45,4 @@ struct GeneViewLoader_Previews: PreviewProvider {
         GeneViewLoader(geneVM: GeneViewModel(), showGene: .Insulin)
     }
 }
+

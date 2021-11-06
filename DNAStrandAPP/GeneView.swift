@@ -37,6 +37,6 @@ struct GeneView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GeneViewLoader(geneVM: GeneViewModel(), showGene: .Insulin)
+        GeneView(gene: WikiAPIResult.sampleUser)
     }
 }
