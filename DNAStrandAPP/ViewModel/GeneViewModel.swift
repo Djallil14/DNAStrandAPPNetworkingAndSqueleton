@@ -23,20 +23,22 @@ class GeneViewModel: ObservableObject {
     }
     
     func getGene() async {
-        print("refreshing")
+        // starting loading Animation
         withAnimation{
             isLoading = true
         }
         dataPhase = .empty
         do {
             var tempArray: [WikiAPIResult] = []
+            // getting all the genes from our Gene Enum
             for genes in Gene.allCases {
                 let gene = try await networkManger.getGene(gene: genes)
                 if let gene = gene {
                     tempArray.append(gene)
                 }
             }
-            withAnimation{
+            // if we get the data we returned a succeded fetch and we stop the loading animation
+            withAnimation(.spring()){
                 dataPhase = .success(tempArray)
                 isLoading = false
             }

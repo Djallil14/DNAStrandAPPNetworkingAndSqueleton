@@ -31,6 +31,9 @@ struct GeneView: View {
             Text(AttributedString(wikidata.extract.htmlAttributedString!))
                     .padding()
             }
+        }.onAppear{
+            // for testing purposes
+            print(wikidata.titleAndParagraphs)
         }
     }
 }

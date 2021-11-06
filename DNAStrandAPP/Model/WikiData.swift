@@ -42,7 +42,7 @@ extension WikiData {
         return nil
     }
     
-    // all the paragraphs
+    // all the paragraphs sparated in an array
     var allTheParagraphs: [String]? {
         let html = extract
         let utfHTML = String(html.utf8)
@@ -63,4 +63,30 @@ extension WikiData {
         }
         return nil
     }
+    
+    var titleAndParagraphs: [String: String]? {
+        do {
+            var tempDic: [String:String] = [:]
+            let html = extract
+            let utfHTML = String(html.utf8)
+            let doc: Document = try SwiftSoup.parse(utfHTML)
+            let resultTitles: Elements? = try doc.select("h2")
+            let resultParagraph: Elements? = try doc.select("h2 ~ p")
+            if let resultTitles = resultTitles {
+                for index in 0..<resultTitles.count {
+                    tempDic[try resultTitles[index].text()] = try resultParagraph?[index].text()
+                }
+            }
+            print(tempDic)
+            return tempDic
+            // direct a after h3
+        } catch Exception.Error(let type, let message) {
+            print(message)
+        } catch {
+            print("error")
+        }
+        return nil
+    }
 }
+
+//let pngs: Elements = try doc.select("img[src$=.png]")
