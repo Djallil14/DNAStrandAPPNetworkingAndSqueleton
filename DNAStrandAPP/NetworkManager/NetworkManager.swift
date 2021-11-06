@@ -1,8 +1,8 @@
 //
 //  NetworkManager.swift
-//  GitUsers
+//  DNAStrandAPP
 //
-//  Created by Djallil Elkebir on 2021-09-28.
+//  Created by Djallil Elkebir on 2021-11-05.
 //
 
 import Foundation

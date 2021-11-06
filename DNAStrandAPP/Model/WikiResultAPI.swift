@@ -9,7 +9,7 @@
 import Foundation
 import SwiftSoup
 
-
+// The gene result we are getting from Wikipedia
 struct WikiAPIResult: Codable {
     let batchcomplete: String
     let query: Query
@@ -54,11 +54,12 @@ struct Pages: Codable {
     
 }
 
-// MARK: - Thumbnail
+// MARK: - Image
 struct WikiImage: Codable {
     let source: String
     let width, height: Int
     
+    // if the thumbnail link has 38px or 50px we remplace it with the resolution we want from the image else we just return the main link
     func formattedImageLink(width: Int)-> String{
         if source.contains("38px"){
             let urlstring = source
