@@ -25,11 +25,14 @@ extension WikiData {
         let html = extract
         let utfHTML = String(html.utf8)
         do {
+            // parsing our document with SwiftSoup
             let doc: Document = try SwiftSoup.parse(utfHTML)
+            // getting all the h2 tags
             let titles = try doc.body()?.select("h2")
             var tempArray: [String] = []
             let _ = try titles?.forEach({ Element in
                 let paragraphe = try Element.text()
+                // appending all the h2 titles to our temporary array
                 tempArray.append(paragraphe)
             })
             return tempArray
@@ -47,11 +50,14 @@ extension WikiData {
         let html = extract
         let utfHTML = String(html.utf8)
         do {
+            // parsing our document with SwiftSoup
             let doc: Document = try SwiftSoup.parse(utfHTML)
-            let titles = try doc.body()?.select("p")
+            // getting all the p tags
+            let ptags = try doc.body()?.select("p")
             var tempArray: [String] = []
-            let _ = try titles?.forEach({ Element in
+            let _ = try ptags?.forEach({ Element in
                 let paragraphe = try Element.text()
+                // appending all the paragraphs to our temporary array
                 tempArray.append(paragraphe)
             })
             return tempArray
@@ -69,19 +75,22 @@ extension WikiData {
             var tempDic: [String:String] = [:]
             let html = extract
             let utfHTML = String(html.utf8)
+            // parsing our document with SwiftSoup
             let doc: Document = try SwiftSoup.parse(utfHTML)
+            // getting all the h2 tags
             let resultTitles: Elements? = try doc.select("h2")
+            // getting all the p tags after a title
             let resultParagraph: Elements? = try doc.select("h2 ~ p")
             if let resultTitles = resultTitles {
                 for index in 0..<resultTitles.count {
+                    // appending title and the following paragraphe
                     tempDic[try resultTitles[index].text()] = try resultParagraph?[index].text()
                 }
             }
             print(tempDic)
             return tempDic
-            // direct a after h3
         } catch Exception.Error(let type, let message) {
-            print(message)
+            print("Message: \(message), type: \(type)")
         } catch {
             print("error")
         }
@@ -89,4 +98,5 @@ extension WikiData {
     }
 }
 
-//let pngs: Elements = try doc.select("img[src$=.png]")
+//let pngs: Elements = try doc.select("img[src$=.png]") to get png images in the article
+// i got to look for parsing the span tag that is wrapping the titles

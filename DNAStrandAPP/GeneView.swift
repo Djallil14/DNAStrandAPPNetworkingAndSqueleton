@@ -33,7 +33,7 @@ struct GeneView: View {
             }
         }.onAppear{
             // for testing purposes
-            print(wikidata.titleAndParagraphs)
+            print((wikidata.titleAndParagraphs ?? [String:String]()))
         }
     }
 }
