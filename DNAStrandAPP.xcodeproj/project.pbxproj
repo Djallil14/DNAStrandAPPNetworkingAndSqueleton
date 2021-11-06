@@ -23,6 +23,8 @@
 		9DADF9C1273619F400A5CA54 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 9DADF9C0273619F400A5CA54 /* SwiftSoup */; };
 		9DADF9C327361A2D00A5CA54 /* HTMLAttributedString+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9C227361A2D00A5CA54 /* HTMLAttributedString+String.swift */; };
 		9DADF9C527361A5E00A5CA54 /* WikiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9C427361A5E00A5CA54 /* WikiData.swift */; };
+		9DADF9C72736E85200A5CA54 /* GeneDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9C62736E85200A5CA54 /* GeneDetailView.swift */; };
+		9DADF9C92736EC0C00A5CA54 /* GeneWikipediaWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DADF9C82736EC0C00A5CA54 /* GeneWikipediaWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		9DADF9B82735F31000A5CA54 /* Gene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gene.swift; sourceTree = "<group>"; };
 		9DADF9C227361A2D00A5CA54 /* HTMLAttributedString+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTMLAttributedString+String.swift"; sourceTree = "<group>"; };
 		9DADF9C427361A5E00A5CA54 /* WikiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiData.swift; sourceTree = "<group>"; };
+		9DADF9C62736E85200A5CA54 /* GeneDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneDetailView.swift; sourceTree = "<group>"; };
+		9DADF9C82736EC0C00A5CA54 /* GeneWikipediaWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneWikipediaWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				9DADF9B22735EE3100A5CA54 /* MainView.swift */,
 				9DADF9B42735EE4F00A5CA54 /* GeneViewLoader.swift */,
 				9D34507B2735BA080047D6B0 /* GeneView.swift */,
+				9DADF9C62736E85200A5CA54 /* GeneDetailView.swift */,
+				9DADF9C82736EC0C00A5CA54 /* GeneWikipediaWebView.swift */,
 				9DADF9BA2735F32400A5CA54 /* ViewModel */,
 				9D34508F2735BB270047D6B0 /* NetworkManager */,
 				9D34508D2735BA9D0047D6B0 /* Model */,
@@ -211,12 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DADF9C92736EC0C00A5CA54 /* GeneWikipediaWebView.swift in Sources */,
 				9DADF9B92735F31000A5CA54 /* Gene.swift in Sources */,
 				9DADF9B52735EE4F00A5CA54 /* GeneViewLoader.swift in Sources */,
 				9D3450882735BA150047D6B0 /* WikiResultAPI.swift in Sources */,
 				9DADF9B32735EE3100A5CA54 /* MainView.swift in Sources */,
 				9D34508A2735BA8A0047D6B0 /* Bundle+LoadAndDecode.swift in Sources */,
 				9D3450912735BB270047D6B0 /* NetworkManager.swift in Sources */,
+				9DADF9C72736E85200A5CA54 /* GeneDetailView.swift in Sources */,
 				9DADF9C327361A2D00A5CA54 /* HTMLAttributedString+String.swift in Sources */,
 				9D3450932735BD990047D6B0 /* GeneViewModel.swift in Sources */,
 				9DADF9B72735F2FB00A5CA54 /* DataFetchPhase.swift in Sources */,

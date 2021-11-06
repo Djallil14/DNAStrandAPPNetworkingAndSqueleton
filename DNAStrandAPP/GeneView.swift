@@ -15,26 +15,32 @@ struct GeneView: View {
     @State var formatedURL: String = ""
     var body: some View {
         VStack{
-            Text(wikidata.title)
             ZStack{
                 if let image = wikidata.thumbnail {
-                    AsyncImage(url: URL(string: image.formattedImageLink(width: 800))) { image in
+                    AsyncImage(url: URL(string: image.formattedImageLink(width: 300))) { image in
                         image
                             .resizable()
-                            .aspectRatio(1, contentMode: .fit)
                     } placeholder: {
                         ProgressView()
                     }
+                } else {
+                    Color.secondary
                 }
-            }
-            ScrollView(.vertical){
-            Text(AttributedString(wikidata.extract.htmlAttributedString!))
-                    .padding()
-            }
-        }.onAppear{
-            // for testing purposes
-            print((wikidata.titleAndParagraphs ?? [String:String]()))
+                VStack {
+                    Spacer()
+                    HStack{
+                        Spacer()
+                    Text(wikidata.title)
+                        .font(.headline)
+                        .padding()
+                        Spacer()
+                    }.background(.ultraThinMaterial)
+                }
+            }.aspectRatio(1, contentMode: .fit)
+                .cornerRadius(18)
         }
+        .shadow(color: .accentColor.opacity(0.2), radius: 3, x: 1, y: 2)
+        .padding()
     }
 }
 

@@ -16,9 +16,13 @@ struct GeneViewLoader: View {
                 case .empty:
                     ProgressView()
                 case .success(let genes):
-                    VStack{
-                        ForEach(genes, id: \.query.pages.resultData.title){gene in
-                          GeneView(gene: gene)
+                    ScrollView{
+                        VStack{
+                            ForEach(genes, id: \.query.pages.resultData.title){gene in
+                                NavigationLink(destination:GeneDetailView(gene: gene) ){
+                              GeneView(gene: gene)
+                                }
+                            }
                         }
                     }
                 case .failure(let error):
